@@ -1,0 +1,164 @@
+/* Gothic Theme for Spicetify - by ChatGPT */
+
+/* ===== GLOBAL COLORS ===== */
+:root {
+  --spice-main: #0a0a0d !important;       /* near‑black with a cool tone */
+  --spice-dark: #050507 !important;       /* deeper background */
+  --spice-dark-alt: #131018 !important;   /* accent dark violet */
+  --spice-accent: #8426ff !important;     /* gothic purple */
+  --spice-text: #d9d4e7 !important;       /* pale lavender text */
+  --spice-text-muted: #a29bb8 !important; /* muted grey-purple */
+  --spice-button: #2b1f38 !important;     /* gothic panel */
+  --spice-highlight: #b37aff !important;  /* soft neon purple */
+  --spice-gradient: linear-gradient(135deg, #120f16, #1d1426, #2a1939) !important;
+}
+
+/* ===== APP BACKGROUND ===== */
+.main-rootlist-wrapper,
+.Root__now-playing-bar,
+.main-view-container,
+.main-home-content,
+.main-view-wrapper,
+.Root__main-view,
+body {
+  background: var(--spice-gradient) !important;
+  color: var(--spice-text) !important;
+}
+
+/* ===== SIDEBAR ===== */
+.main-navBar-navBar {
+  background: var(--spice-dark) !important;
+  border-right: 1px solid #1d1525;
+}
+
+/* active / hovered icons */
+.main-navBar-navBar a:hover svg,
+.main-navBar-navBar a:focus svg,
+.main-navBar-navBar .active svg {
+  color: var(--spice-accent) !important;
+}
+
+/* sidebar playlists */
+.Root__nav-bar .main-rootlist-rootlistItem a {
+  color: var(--spice-text-muted) !important;
+}
+.Root__nav-bar .main-rootlist-rootlistItem a:hover {
+  color: var(--spice-highlight) !important;
+}
+
+/* ===== TOP HEADER / SEARCH BAR ===== */
+.main-topBar-container {
+  background: rgba(10, 10, 13, 0.5) !important;
+  backdrop-filter: blur(8px);
+}
+
+.main-topBar-searchBar {
+  background: #1b1523 !important;
+  border-radius: 12px !important;
+  border: 1px solid #291b3b;
+}
+
+.main-topBar-searchBar input {
+  color: var(--spice-text) !important;
+}
+
+/* ===== CARDS (Playlists, Albums) ===== */
+.main-cardImage-container,
+.main-card-card {
+  background-color: #140f19 !important;
+  border-radius: 14px !important;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.main-card-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 0 20px rgba(132, 38, 255, 0.4);
+}
+
+/* titles */
+.main-cardHeader-text,
+.main-cardSubHeader-root {
+  color: var(--spice-text) !important;
+}
+
+/* ===== PLAY BUTTONS ===== */
+.playButton,
+.control-button,
+.main-playButton-PlayButton {
+  background-color: #2c1e3a !important;
+  color: var(--spice-highlight) !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 10px rgba(132, 38, 255, 0.4);
+  transition: 0.2s ease;
+}
+
+.playButton:hover,
+.control-button:hover {
+  background-color: #3b2b4d !important;
+  box-shadow: 0 0 14px rgba(178, 122, 255, 0.6);
+}
+
+/* ===== TRACK LISTS ===== */
+.main-trackList-trackListRow {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+.main-trackList-trackListRow:hover {
+  background: rgba(52, 34, 71, 0.3) !important;
+}
+
+.main-trackList-rowTitle {
+  color: var(--spice-text) !important;
+}
+
+.main-trackList-rowSubtitle {
+  color: var(--spice-text-muted) !important;
+}
+
+/* ===== NOW PLAYING BAR ===== */
+.Root__now-playing-bar {
+  background: #0c0a10 !important;
+  border-top: 1px solid #1f152a !important;
+}
+
+.playback-bar__progress-time {
+  color: var(--spice-text-muted) !important;
+}
+
+.x-progressBar-fill {
+  background-color: var(--spice-accent) !important;
+}
+
+/* ===== SCROLLBARS ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #120f16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #291b3b;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b2b4d;
+}
+
+/* ===== MISC GOTHIC TOUCHES ===== */
+button,
+input,
+select {
+  border-radius: 8px !important;
+  background: #1b1523 !important;
+  color: var(--spice-text) !important;
+  border: 1px solid #291b3b !important;
+}
+
+button:hover,
+select:hover {
+  border-color: var(--spice-accent) !important;
+}
