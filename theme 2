@@ -1,0 +1,185 @@
+/* ============================================================
+   CYBER-GOTH NEON PURPLE THEME — with HOLOGRAPHIC GLOW BUTTONS
+   Designed for Spicetify by ChatGPT
+   ============================================================ */
+
+/* ----------- GLOBAL COLOR VARIABLES ----------- */
+:root {
+  --cg-bg: #050505;                     /* matte near-black */
+  --cg-bg-alt: #0a0a0f;                 /* deeper panels */
+  --cg-card: #111017;                   /* tile background */
+  --cg-neon: #b037ff;                   /* neon purple */
+  --cg-neon-soft: #ca7aff;              /* soft glow */
+  --cg-text: #e6dfff;                   /* bright lavender */
+  --cg-text-dim: #a18fbf;               /* muted */
+  --cg-border: #2a1a3b;                 /* subtle purple border */
+}
+
+/* ---------------------------------------------------------
+   APP BACKGROUND
+--------------------------------------------------------- */
+body,
+.Root__main-view,
+.main-view-container {
+  background: radial-gradient(circle at 50% 0%, #120a1e 0%, #050505 55%) !important;
+  color: var(--cg-text) !important;
+}
+
+/* ---------------------------------------------------------
+   SIDEBAR
+--------------------------------------------------------- */
+.main-navBar-navBar {
+  background: var(--cg-bg-alt) !important;
+  border-right: 1px solid #1c122a !important;
+}
+
+.main-navBar-navBar svg {
+  color: var(--cg-text-dim) !important;
+}
+
+.main-navBar-navBar a:hover svg,
+.main-navBar-navBar .active svg {
+  color: var(--cg-neon) !important;
+  filter: drop-shadow(0 0 6px var(--cg-neon));
+}
+
+/* ---------------------------------------------------------
+   SEARCH BAR + TOP BAR
+--------------------------------------------------------- */
+.main-topBar-container {
+  background: rgba(10, 10, 15, 0.4) !important;
+  backdrop-filter: blur(12px);
+}
+
+.main-topBar-searchBar {
+  background: #140f1d !important;
+  border: 1px solid var(--cg-border);
+  border-radius: 12px !important;
+}
+
+.main-topBar-searchBar input {
+  color: var(--cg-text) !important;
+}
+
+/* ---------------------------------------------------------
+   CARDS + HOVER EFFECTS
+--------------------------------------------------------- */
+.main-card-card,
+.main-cardImage-container {
+  background: var(--cg-card) !important;
+  border-radius: 14px !important;
+  transition: 0.25s ease;
+  border: 1px solid rgba(176, 55, 255, 0.05);
+}
+
+.main-card-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow:
+    0 0 12px rgba(176, 55, 255, 0.35),
+    0 0 25px rgba(176, 55, 255, 0.20);
+  border-color: rgba(176, 55, 255, 0.3);
+}
+
+/* Titles */
+.main-cardHeader-text,
+.main-cardSubHeader-root {
+  color: var(--cg-text) !important;
+}
+
+/* ---------------------------------------------------------
+   HOLOGRAPHIC GLOW BUTTONS ✦ (OPTION A)
+--------------------------------------------------------- */
+.playButton,
+.main-playButton-PlayButton,
+.control-button {
+  background: #1c1227 !important;
+  border-radius: 50% !important;
+  color: var(--cg-neon-soft) !important;
+
+  /* HOLOGRAPHIC GLOW EFFECT */
+  box-shadow:
+    0 0 10px rgba(176, 55, 255, 0.55),
+    0 0 25px rgba(176, 55, 255, 0.25),
+    inset 0 0 10px rgba(176, 55, 255, 0.35);
+
+  transition: transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.playButton:hover,
+.control-button:hover {
+  transform: scale(1.12);
+  box-shadow:
+    0 0 15px rgba(202, 122, 255, 0.9),
+    0 0 30px rgba(202, 122, 255, 0.7),
+    inset 0 0 14px rgba(202, 122, 255, 0.6);
+}
+
+/* ---------------------------------------------------------
+   TRACK LIST
+--------------------------------------------------------- */
+.main-trackList-trackListRow {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.main-trackList-trackListRow:hover {
+  background: rgba(120, 34, 175, 0.22) !important;
+}
+
+.main-trackList-rowTitle {
+  color: var(--cg-text) !important;
+}
+
+.main-trackList-rowSubtitle {
+  color: var(--cg-text-dim) !important;
+}
+
+/* ---------------------------------------------------------
+   NOW PLAYING BAR
+--------------------------------------------------------- */
+.Root__now-playing-bar {
+  background: #08060c !important;
+  border-top: 1px solid #1b1130 !important;
+}
+
+.x-progressBar-fill {
+  background: var(--cg-neon) !important;
+  box-shadow: 0 0 10px var(--cg-neon);
+}
+
+/* ---------------------------------------------------------
+   SCROLLBARS
+--------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0810;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #281637;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a1f4f;
+}
+
+/* ---------------------------------------------------------
+   FORM ELEMENTS
+--------------------------------------------------------- */
+button,
+input,
+select {
+  background: #140f1d !important;
+  border: 1px solid var(--cg-border) !important;
+  color: var(--cg-text) !important;
+  border-radius: 8px !important;
+}
+
+button:hover {
+  border-color: var(--cg-neon);
+  box-shadow: 0 0 10px rgba(176, 55, 255, 0.4);
+}
